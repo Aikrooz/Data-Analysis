@@ -18,10 +18,10 @@ Pounds in 1000s(features)|Miles per gallon(label)|
 2.37                     |24
 
 The plotted graph below
-![alt text](car-data-points-with-model.png)
+![alt text](images/car-data-points-with-model.png)
 
 Car heaviness(in pounds) versus miles per gallon decreases as car get heavier
-![alt text](car-data-points-with-model-1.png)
+![alt text](images/car-data-points-with-model-1.png)
 
 
 Linear regression equation:
@@ -38,10 +38,10 @@ where
 -> w1 is called weight and its the same concept of slope(m) its also serves as a parameter for the model during training.
 -> x1 is the feature of the data
 During training the model calculates the best weight and bias that brings the best model built on that data
-![alt text](equation.png)
+![alt text](images/equation.png)
 
 In our example we calculated the weights and bias from the line we drew.The bias is 34 (where the line intersects with the y-axis),and the weight is -4.6(the slope of the line).The model defined as y'=34+(-4.6)(x1),and we could use it to make predictions.For instance , using this model,a 4,000 pound car would have a predicted fuel efficiency of 15.6 miles per gallon.
-![alt text](model-prediction.png)
+![alt text](images/model-prediction.png)
 
 
 Models with multiple features
@@ -53,15 +53,15 @@ For example, a model that predicts gas mileage could additionally use features s
 -> Acceleration
 -> Number of cylinders
 -> Horsepower
-This model would be written as follows:![alt text](equation-multiple-features.png)
+This model would be written as follows:![alt text](images/equation-multiple-features.png)
 
 . A model with five features to predict a car's miles per gallon rating.
 
 By graphing some of these additional features, we can see that they also have a linear relationship to the label, miles per gallon:
-![alt text](displacement.png)
+![alt text](images/displacement.png)
 
- A car's displacement in cubic centimeters and its miles per gallon rating. As a car's engine gets bigger, its miles per gallon rating generally decreases.![alt text](acceleration.png)
+ A car's displacement in cubic centimeters and its miles per gallon rating. As a car's engine gets bigger, its miles per gallon rating generally decreases.![alt text](images/acceleration.png)
 
- igure 7. A car's acceleration and its miles per gallon rating. As a car's acceleration takes longer, the miles per gallon rating generally increases.![alt text](horsepower.png)
+ igure 7. A car's acceleration and its miles per gallon rating. As a car's acceleration takes longer, the miles per gallon rating generally increases.![alt text](images/horsepower.png)
 
 Figure 8. Horsepower graphed against miles per gallon showing a negative linear relationship.
