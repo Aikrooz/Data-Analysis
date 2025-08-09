@@ -36,3 +36,34 @@ A model trained with MAE is farther from the outliers
 Note the relationship between the model and the data
 ->MSE:The model moves twords the outliers and further away from the data points
 ->MAE: The model is further away from the outliers and closer to the data points
+
+
+NOTE:
+. Check for Outliers
+If your dataset has a lot of outliers (extreme values in your target variable) →
+Use MAE — it won’t let those big errors dominate the loss.
+
+If your dataset is clean (few or no outliers) →
+Use MSE — you can afford to let the model focus more on avoiding large mistakes.
+
+2. Decide on Error Sensitivity
+If big mistakes are MUCH worse than small ones in your problem, use MSE (squares make large errors count more).
+
+If all mistakes are equally bad, use MAE.
+
+Example:
+
+Predicting delivery times for customers → Being off by 1 hour vs. 5 hours is very different → MSE.
+
+Predicting daily temperature → Being off by 2°C vs. 4°C is proportionally bad → MAE.
+
+3. Optimization Considerations
+MSE has a smooth gradient → Often converges faster for gradient-based learning.
+
+MAE has a constant gradient (except at zero) → Can be slower, especially with stochastic gradient descent.
+
+4. Interpretability
+MAE is in the same units as your target variable → Easier to explain results to non-technical people.
+
+MSE’s units are squared → Not directly interpretable without taking the square root (RMSE).
+
