@@ -1,0 +1,1 @@
+Machine learning is the study of powerful techniques that learn from experience.As ML algorithm takes more information from observation of patterns in datasets the more it improves.
