@@ -35,30 +35,27 @@ print(splitted_words)
 
 import collections
 
-def get_pair_stats(splits):
-  pair_stats = collections.defaultdict(int)
-  for word_tuple, count in splits.items():
-    symbols = list(word_tuple)
-    for i in range(len(symbols) - 1):
-      pair = (symbols[i], symbols[i + 1])
-      pair_stats[pair] += count
-  return pair_stats
+def get_pair_stats(splits)
+  pair_to_merge=collections.defaulf(int)
+  for merge,freq in splits.item()
+    symbols=list(merge)
+    pair=(symbols[i]+symbols[i+1])
+    pair_to_merge[pair]+=freq
+  return pair_to_merge
 
 def merge_pair(pair_to_merge,splits):
-  new_splits = {}
+  new_splits={}
   first,second=pair_to_merge
-  merged_token=first +second
-  for word_tuple,freq in splits.items():
-    symbols=list(word)
+  merged_token=first+second
+  for mrege,freq in splits.item:
     new_symbols=[]
     i=0
     while i < len(symbols):
-      if i<len(symbols) -1 and symbols[i]==first and symbols[i+1]==second:
+      if i < len(symbols) and symbols[i]==first and symbols[i+1]==second:
         new_symbols.append(merged_token)
         i+=2
       else:
         new_symbols.append(symbols[i])
-        i +=1
-      new_splits[tuple(new_symbols)]=freq
-    return new_splits
+        i+=1
+        new_splits[tuple(symbols)]=freq
 
