@@ -29,6 +29,10 @@ for words in corpus:
 
 print(splitted_words)
 
+
+
+
+
 import collections
 
 def get_pair_stats(splits):
@@ -55,5 +59,6 @@ def merge_pair(pair_to_merge,splits):
       else:
         new_symbols.append(symbols[i])
         i +=1
-        <iframe width="853" height="480" src="https://www.youtube.com/embed/fkIvmfqX-t0" title="Harvard Professor Explains Algorithms in 5 Levels of Difficulty | WIRED" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      new_splits[tuple(new_symbols)]=freq
+    return new_splits
 
